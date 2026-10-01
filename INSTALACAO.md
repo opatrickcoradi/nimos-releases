@@ -14,12 +14,13 @@
 
 **Requisito:** macOS 13 (Ventura) ou mais novo.
 
-Qual arquivo baixar — menu Apple → *Sobre este Mac*:
+Qual arquivo baixar — menu Apple → *Sobre este Mac*. Os nomes abaixo mostram a versão
+atual; na página de Releases, pegue sempre a mais nova.
 
 | O que aparece lá | Arquivo |
 |---|---|
-| Chip Apple (M1, M2, M3…) | `Nimos_0.1.1_aarch64.dmg` |
-| Processador Intel | `Nimos_0.1.1_x64.dmg` |
+| Chip Apple (M1, M2, M3…) | `Nimos_0.1.2_aarch64.dmg` |
+| Processador Intel | `Nimos_0.1.2_x64.dmg` |
 
 1. Abra o `.dmg` e arraste o ícone do Nimos para a pasta **Aplicativos**.
 2. Abra o Nimos. **O macOS vai bloquear**, dizendo que não foi possível verificar o
@@ -31,7 +32,7 @@ Qual arquivo baixar — menu Apple → *Sobre este Mac*:
 ### Conferir que o arquivo é o nosso
 
 ```bash
-shasum -a 256 ~/Downloads/Nimos_0.1.1_aarch64.dmg
+shasum -a 256 ~/Downloads/Nimos_0.1.2_aarch64.dmg
 ```
 
 Compare com a linha correspondente do `SHA256SUMS.txt` publicado junto. Precisa ser
@@ -44,7 +45,7 @@ isso que o checksum existe enquanto não há certificado.
 
 **Requisito:** Windows 10 versão 1803 ou mais novo.
 
-1. Execute `Nimos_0.1.1_x64-setup.exe`.
+1. Execute `Nimos_0.1.2_x64-setup.exe`.
 2. **O SmartScreen vai avisar** que protegeu o computador. Clique em **"Mais informações"**
    e depois em **"Executar assim mesmo"**.
 3. Siga o instalador.
@@ -61,7 +62,7 @@ Liberar na mão esconde o problema para você e deixa todos os outros clientes c
 ### Conferir que o arquivo é o nosso
 
 ```powershell
-Get-FileHash .\Nimos_0.1.1_x64-setup.exe -Algorithm SHA256
+Get-FileHash .\Nimos_0.1.2_x64-setup.exe -Algorithm SHA256
 ```
 
 Compare com o `SHA256SUMS.txt`.
