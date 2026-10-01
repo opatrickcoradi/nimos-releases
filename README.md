@@ -15,41 +15,14 @@ Os instaladores estão em [Releases](../../releases). Pegue sempre a versão mai
 | macOS (Intel) | `Nimos_X.Y.Z_x64.dmg` |
 | Windows | `Nimos_X.Y.Z_x64-setup.exe` |
 
-## Confira o arquivo antes de instalar
+## Instalar
 
-O Nimos ainda não tem certificado de assinatura, então o sistema vai pedir confirmação ao
-abrir. O checksum é o que permite ter certeza de que o arquivo é o que publicamos — e não
-algo trocado no caminho.
+O passo a passo completo — incluindo como passar pelo aviso do sistema, conferir o
+checksum e o que fazer ao trocar de computador — está em
+**[INSTALACAO.md](INSTALACAO.md)**.
 
-Cada release traz um `SHA256SUMS.txt`. Para conferir:
+O resumo: baixe o arquivo da sua plataforma, confira o SHA-256 contra o
+`SHA256SUMS.txt` que acompanha, e abra. Na primeira vez o sistema vai pedir confirmação,
+porque o instalador ainda não tem certificado de assinatura.
 
-```bash
-# macOS e Linux
-shasum -a 256 Nimos_0.1.1_aarch64.dmg
-```
-
-```powershell
-# Windows
-Get-FileHash Nimos_0.1.1_x64-setup.exe -Algorithm SHA256
-```
-
-O valor precisa bater com a linha correspondente do `SHA256SUMS.txt`. Se não bater, **não
-instale** e fale conosco.
-
-## Primeira abertura
-
-**macOS:** o sistema vai dizer que o app não pôde ser verificado. Vá em *Configurações do
-Sistema → Privacidade e Segurança*, role até o aviso sobre o Nimos e clique em *Abrir
-mesmo assim*.
-
-**Windows:** o SmartScreen vai mostrar "O Windows protegeu o computador". Clique em *Mais
-informações* e depois em *Executar assim mesmo*.
-
-Os dois acontecem porque o instalador não tem certificado — não porque haja algo errado
-com o arquivo. É o que o checksum acima serve para confirmar.
-
-## Ativação
-
-Na primeira abertura o app pede uma chave de ativação, que o gestor da sua empresa gera
-no console. Ela serve uma vez só; depois disso o app se mantém sozinho e não pede mais
-nada. Atualizações chegam automaticamente.
+Depois de instalado, o Nimos se atualiza sozinho. Você não precisa voltar aqui.
